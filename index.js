@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var AuthorsController = require("./controllers/AuthorsController");
+var AuthorsController = require("./app/controllers/AuthorsController");
 
 // app.get('/', function(req, res){
 //     res.send('Hello World!');
