@@ -1,16 +1,22 @@
 module.exports = {
     "development": {
-        "dialect": "sqlite",
-        "storage": "data/dev-db.sqlite3"
+        "username": "postgres",
+        "password": "postgres",
+        "database": "exemplo_controller_dev",
+        "host": "localhost",
+        "dialect": "postgres"
     },
     "test": {
-        "dialect": "sqlite",
-        "storage": "data/test-db.sqlite3"
+        "username": "postgres",
+        "password": "postgres",
+        "database": "exemplo_controller_test",
+        "host": "localhost",
+        "dialect": "postgres"
     },
     "production": {
-        "username": "user_postgres",
-        "password": "senha",
-        "database": "nome_db",
+        "username": "postgres",
+        "password": "postgres",
+        "database": "exemplo_controller_prod",
         "host": "localhost",
         "dialect": "postgres"
     }
