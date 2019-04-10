@@ -1,0 +1,12 @@
+
+node_modules/.bin/sequelize model:generate --name Author --attributes first_name:string,last_name:string
+
+node_modules/.bin/sequelize db:create
+
+node_modules/.bin/sequelize db:migrate
+
+node_modules/.bin/sequelize db:migrate:undo
+
+node_modules/.bin/sequelize db:migrate:undo --to nome_da_migracao
+
+node_modules/.bin/nodemon index.js executar servidor

@@ -9,6 +9,7 @@
   "author": "Fernando R da Silva",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
     "pg": "^7.9.0",
