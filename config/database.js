@@ -2,21 +2,21 @@ module.exports = {
     "development": {
         "username": "postgres",
         "password": "postgres",
-        "database": "exemplo_controller_dev",
+        "database": "books_api_dev",
         "host": "localhost",
         "dialect": "postgres"
     },
     "test": {
         "username": "postgres",
         "password": "postgres",
-        "database": "exemplo_controller_test",
+        "database": "books_api_test",
         "host": "localhost",
         "dialect": "postgres"
     },
     "production": {
         "username": "postgres",
         "password": "postgres",
-        "database": "exemplo_controller_prod",
+        "database": "books_api_prod",
         "host": "localhost",
         "dialect": "postgres"
     }
