@@ -17,14 +17,25 @@ CREATE this Modules
 node_modules/.bin/sequelize model:generate --name User --attributes login:string,senha:string
 node_modules/.bin/sequelize model:generate --name Address --attributes cep:string,street:string,number:string,city:string,uf:string,obs:string
 node_modules/.bin/sequelize model:generate --name Book --attributes name:string,author:string,edition:string,year:string,photo:string
-node_modules/.bin/sequelize model:generate --name Person --attributes name:string,id_user:string,age:string,photo:string,about:string,id_address:string,phone:string
+node_modules/.bin/sequelize model:generate --name Person --attributes name:string,id_user:string,age:date,photo:string,about:string,id_address:string,phone:string
 
 node_modules/.bin/sequelize model:generate --name PersonBook --attributes id_person:string,id_book:string,state:string,for_donation:boolean,for_exchange:boolean
 node_modules/.bin/sequelize model:generate --name PersonBookInterest --attributes id_person:string,id_book:string
 
 node_modules/.bin/sequelize model:generate --name Message --attributes publisher_message:string,interested_message:string
 
-node_modules/.bin/sequelize model:generate --name Donation --attributes publisher:string,interested:string,date:string,hour:string,locale:string,book_publisher:string,book_interested:string
-node_modules/.bin/sequelize model:generate --name Exchange --attributes publisher:string,interested:string,date:string,hour:string,locale:string,book:string
+node_modules/.bin/sequelize model:generate --name Exchange --attributes publisher:string,interested:string,date:date,locale:string,book_publisher:string,book_interested:string
+node_modules/.bin/sequelize model:generate --name Donation --attributes publisher:string,interested:string,date:date,locale:string,book:string
 
 node_modules/.bin/sequelize model:generate --name DonationMessage --attributes id_donation:string,id_message:string
+node_modules/.bin/sequelize model:generate --name ExchangeMessage --attributes id_exchange:string,id_message:string
+
+example for create relation
+id_user: {
+        type: Sequelize.STRING,
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
+        allowNull: false
+      },

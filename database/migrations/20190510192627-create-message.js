@@ -1,18 +1,17 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Users', {
+    return queryInterface.createTable('Messages', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      login: {
-        type: Sequelize.STRING,
-        unique: true
+      publisher_message: {
+        type: Sequelize.STRING
       },
-      senha: {
+      interested_message: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -26,6 +25,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable('Messages');
   }
 };
